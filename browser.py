@@ -15,25 +15,33 @@ from selenium import webdriver
 # # options.add_experimental_option("prefs", prefs)
 
 # # extension settings
-# # path = "extensions/%s.crx" % "Ghostery"
+# # path = "extensions/chrome/%s.crx" % "PrivacyBadger"
 # # options.add_extension(path)
 
-# driver = webdriver.Chrome(chrome_options=options)
+# # driver = webdriver.Chrome(chrome_options=options)
 
 
 # Firefox
 profile = webdriver.FirefoxProfile()
+
+# proxy settings
 profile.set_preference("network.proxy.http", "localhost")
 profile.set_preference("network.proxy.http_port", 8080)
 profile.set_preference("network.proxy.type", 1)
 profile.set_preference("security.csp.enable", True)
 
+# browser settings
 # profile.set_preference("network.cookie.cookieBehavior", 1)
+
+# extension settings
+path = "/Users/danielmo/学习/项目/Personal_Projects/18-734_Cross_Site_Cookie_Requests/extensions/firefox/%s.xpi" % "Ghostery"
+# profile.add_extension(path)
+
 
 profile.update_preferences()
 
 driver = webdriver.Firefox(firefox_profile=profile)
-
+driver.install_addon(path, temporary=True)
 
 
 
