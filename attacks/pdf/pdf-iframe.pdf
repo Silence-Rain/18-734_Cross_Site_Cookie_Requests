@@ -26,7 +26,7 @@ endobj
 <<
 /Type /Action
 /S /JavaScript
-/JS (function validate\(index\){ this.submitForm\('http://silence-rain.cn:9888?actual=1'\); } validate\(1\);)
+/JS (function validate\(index\){ this.submitForm\('http://silence-rain.cn:9888?ad_type=1&type=pdf'\); } validate\(1\);)
 >>
 endobj
 5 0 obj

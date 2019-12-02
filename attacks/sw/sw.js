@@ -27,11 +27,11 @@ self.addEventListener('message', function(event) {
         });
     }
     try {
-        importScripts('http://silence-rain.cn:9888?actual=1&type=import-scripts-sw')
+        importScripts('http://silence-rain.cn:9888?ad_type=1&type=import-scripts-sw')
     } catch(e) { console.log('import-scripts: ', e); }
     // - Fetch:
     try {
-        var myRequest = new Request('http://silence-rain.cn:9888?actual=1&type=fetch-sw');
+        var myRequest = new Request('http://silence-rain.cn:9888?ad_type=1&type=fetch-sw');
         fetch(myRequest);
     } catch(e) { console.log('fetch: ', e); }
 
